@@ -2,6 +2,7 @@ import { Component } from 'react';
 import { GlobalStyle } from './GlobalStyle';
 import { FeedbackSection } from './FeedbackSection/FeedbackSection';
 import { Statistics } from './Statistics/Statistics';
+import { Notification } from './Notification/Notification';
 
 export class App extends Component {
   state = {
@@ -43,7 +44,9 @@ export class App extends Component {
           bad={bad}
           onLeaveFeedback={this.onLeaveFeedback}
         />
-        {showStatistics && (
+        {!showStatistics ? (
+          <Notification message="There is no feedback" />
+        ) : (
           <Statistics
             good={good}
             neutral={neutral}
