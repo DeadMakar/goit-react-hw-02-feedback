@@ -1,7 +1,4 @@
-import {
-  SectionContainer,
-  Title,
-} from '../FeedbackSection/FeedBackSection.styled';
+import { SectionContainer, Title } from './Notification.styled.js';
 
 export const Notification = ({ message }) => {
   return (
